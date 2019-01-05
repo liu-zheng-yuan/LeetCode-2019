@@ -18,6 +18,7 @@ def downAdjust(heap: list, low: int, high: int):
 
 
 # 真正的建堆。从后往前，从第一个非叶子节点开始（n//2）到1号位置，每个都做[i,n]的调整。倒着枚举保证了 每个结点都是以其为根节点的子树中权值最大的结点
+# 自下而上建堆 On
 def createHeap(heap: list):
     #第0位无意义，所以一共只有len - 1 个数
     for i in range((len(heap)-1) // 2, 0, -1):
