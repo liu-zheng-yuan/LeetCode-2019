@@ -31,10 +31,11 @@ def Binary_find_Kth(arr1: list, arr2: list, k):
     if len(arr2) < len(arr1):
         arr1, arr2 = arr2, arr1
     # 递归边界
-    if k == 1:
-        return min(arr1[0], arr2[0])
     if len(arr1) == 0:
         return arr2[k - 1]
+    if k == 1:
+        return min(arr1[0], arr2[0])
+
 
     # 将k分成两部分 分别在arr1和arr2上找
     k1 = min(k // 2, len(arr1))
